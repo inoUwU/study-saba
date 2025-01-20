@@ -61,10 +61,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "font"
+version = "0.1.0"
+source = "git+https://github.com/hikalium/wasabi.git?branch=for_saba_20241111#abf27c6f587e777fce5c53234d45d997ed075996"
+dependencies = [
+ "syn",
+]
+
+[[package]]
 name = "micromath"
 version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c3c8dda44ff03a2f238717214da50f65d5a53b45cd213a7370424ffdb6fae815"
+
+[[package]]
+name = "net_wasabi"
+version = "0.1.0"
+dependencies = [
+ "noli 0.1.0 (git+https://github.com/hikalium/wasabi.git?branch=for_saba_20241111)",
+ "saba_core",
+]
 
 [[package]]
 name = "noli"
@@ -72,8 +88,18 @@ version = "0.1.0"
 source = "git+https://github.com/hikalium/wasabi.git?branch=for_saba#abf27c6f587e777fce5c53234d45d997ed075996"
 dependencies = [
  "embedded-graphics",
- "font",
- "sabi",
+ "font 0.1.0 (git+https://github.com/hikalium/wasabi.git?branch=for_saba)",
+ "sabi 0.1.0 (git+https://github.com/hikalium/wasabi.git?branch=for_saba)",
+]
+
+[[package]]
+name = "noli"
+version = "0.1.0"
+source = "git+https://github.com/hikalium/wasabi.git?branch=for_saba_20241111#abf27c6f587e777fce5c53234d45d997ed075996"
+dependencies = [
+ "embedded-graphics",
+ "font 0.1.0 (git+https://github.com/hikalium/wasabi.git?branch=for_saba_20241111)",
+ "sabi 0.1.0 (git+https://github.com/hikalium/wasabi.git?branch=for_saba_20241111)",
 ]
 
 [[package]]
@@ -107,7 +133,9 @@ dependencies = [
 name = "saba"
 version = "0.1.0"
 dependencies = [
- "noli",
+ "net_wasabi",
+ "noli 0.1.0 (git+https://github.com/hikalium/wasabi.git?branch=for_saba)",
+ "saba_core",
 ]
 
 [[package]]
@@ -118,6 +146,11 @@ version = "0.1.0"
 name = "sabi"
 version = "0.1.0"
 source = "git+https://github.com/hikalium/wasabi.git?branch=for_saba#abf27c6f587e777fce5c53234d45d997ed075996"
+
+[[package]]
+name = "sabi"
+version = "0.1.0"
+source = "git+https://github.com/hikalium/wasabi.git?branch=for_saba_20241111#abf27c6f587e777fce5c53234d45d997ed075996"
 
 [[package]]
 name = "syn"
